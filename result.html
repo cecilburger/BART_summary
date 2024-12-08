@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pencarian - Ride Radar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Loading Screen (Hidden once loading is complete) -->
+    <div id="loading-screen">
+        <div class="car-loading">
+            <div class="car-body"></div>
+            <div class="car-wheel wheel1"></div>
+            <div class="car-wheel wheel2"></div>
+            <div class="smoke smoke1"></div>
+            <div class="smoke smoke2"></div>
+            <div class="smoke smoke3"></div>
+        </div>
+    </div>
+
+    <!-- Back Button and Search Bar -->
+    <div class="result-header">
+        <a href="{{ url_for('index') }}" class="back-button">Back</a>
+        <form id="searchForm" action="{{ url_for('search_route') }}" method="post" class="result-search">
+            <input type="text" id="query" name="query" class="search-input" placeholder="Search..." required>
+            <button type="submit" id="searchButton" class="search-button" aria-label="Search">
+                <img src="{{ url_for('static', filename='search_icon.png') }}" alt="Search Icon" class="search-icon">
+            </button>            
+        </form>
+    </div>
+
+    <!-- Search Results Container -->
+    <div class="search-results-container">
+        <h2 class="search-results-title">Hasil Pencarian untuk: "{{ query }}"</h2>
+
+        <div id="results" class="results-container">
+            {% if results %}
+                {% for result in results %}
+                    <div class="result-item">
+                        <h2 class="result-title">
+                            <a href="{{ result.link }}" target="_blank" class="title-text">{{ result.title }}</a>
+                        </h2>
+                        <p class="result-summary">{{ result.summary }}</p>
+                        <p class="result-similarity">Tingkat Kemiripan: {{ result.similarity }}</p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p class="no-results-message">Hasil pencarian tidak ditemukan.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        // Hide loading screen once the page has loaded
+        window.addEventListener("load", function() {
+            document.getElementById("loading-screen").style.display = "none";
+        });
+    </script>
+</body>
+</html>

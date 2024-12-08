@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Ride Radar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar-links">
+            <a href="{{ url_for('index') }}" class="navbar-link">Home</a>
+            <a href="{{ url_for('about') }}" class="navbar-link">About</a>
+        </div>
+    </header>
+
+    <div class="help-container">
+        <h1 class="help-title">Help - Cara Menggunakan Ride Radar</h1>
+        
+        <section class="help-section">
+            <h2 class="help-subtitle">Panduan Umum</h2>
+            <p>Untuk mencari informasi di Ride Radar, masukkan kata kunci di kotak pencarian dan klik tombol "Search". Sistem akan menampilkan hasil pencarian yang sesuai dengan kata kunci Anda.</p>
+        </section>
+        
+        <section class="help-section">
+            <h2 class="help-subtitle">Fitur Utama</h2>
+            <ul>
+                <li><strong>Pencarian Akurat:</strong> Algoritma kami dirancang untuk memberikan hasil yang relevan dan akurat.</li>
+                <li><strong>Pengurutan Hasil:</strong> Hasil pencarian diurutkan berdasarkan tingkat kemiripan dengan kata kunci yang dimasukkan.</li>
+                <li><strong>Filter Pencarian:</strong> Anda dapat memfilter hasil berdasarkan kategori tertentu untuk menemukan informasi yang lebih spesifik.</li>
+            </ul>
+        </section>
+
+        <section class="help-section">
+            <h2 class="help-subtitle">Langkah-Langkah Pencarian</h2>
+            <ol>
+                <li>Klik kotak pencarian di halaman utama.</li>
+                <li>Masukkan kata kunci atau frasa yang ingin Anda cari.</li>
+                <li>Klik tombol "Search" atau tekan Enter pada keyboard Anda.</li>
+                <li>Hasil pencarian akan muncul, dan Anda dapat memilih hasil yang relevan untuk informasi lebih lanjut.</li>
+            </ol>
+        </section>
+        
+        <section class="help-section">
+            <h2 class="help-subtitle">Kontak Bantuan</h2>
+            <p>Jika Anda membutuhkan bantuan lebih lanjut, silakan hubungi melalui email di cecilnagetdino@gmail.com.</p>
+        </section>
+    </div>
+</body>
+</html>

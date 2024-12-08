@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang - Ride Radar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header with Logo and Navbar Links -->
+    <header class="header">
+        <div class="navbar-links">
+            <a href="{{ url_for('index') }}" class="navbar-link">Home</a>
+            <a href="{{ url_for('help') }}" class="navbar-link">Help</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <div class="about-container">
+        <h1 class="about-title">Tentang Ride Radar</h1>
+        
+        <!-- Ride Radar Description -->
+        <section class="about-section">
+            <p>Ride Radar adalah mesin pencari berbasis teks yang dirancang khusus untuk pencarian informasi otomotif. Aplikasi ini menggabungkan teknologi web scraping dan pemrosesan bahasa alami (NLP) menggunakan model BART untuk menghasilkan ringkasan konten secara cepat dan akurat dari berbagai sumber otomotif.</p>
+            <p><strong>Metode yang Digunakan:</strong></p>
+            <ul>
+                <li><strong>Scraping Data Otomotif:</strong> Proses ini melibatkan ekstraksi data dari situs web otomotif terkemuka untuk mengumpulkan informasi terkini dan relevan.</li>
+                <li><strong>Model BART untuk Ringkasan Teks:</strong> BART (Bidirectional and Auto-Regressive Transformer) adalah model transformator yang efektif dalam tugas-tugas seperti generasi teks, terjemahan, dan pemahaman bahasa alami.</li>
+                <li><strong>Pencarian Berbasis TF-IDF:</strong> Teknik ini digunakan untuk menilai pentingnya kata-kata dalam dokumen tertentu, membantu dalam mengidentifikasi istilah yang paling relevan selama proses pencarian.</li>
+            </ul>
+        </section>
+
+        <!-- Mentor Section -->
+        <section class="about-section mentor-row">
+            <!-- Bu Viny's Section -->
+            <div class="mentor">
+                <img src="{{ url_for('static', filename='buviny.jpg') }}" alt="Foto Bu Viny" class="profile-photo">
+                <p class="mentor-name">VINY CHRISTANTI MAWARDI, S.Kom., M.Kom.</p>
+                <p class="mentor-role">Dosen Pembimbing</p>
+            </div>
+
+            <!-- Ceciliana Takeshi's Section -->
+            <div class="mentor">
+                <img src="{{ url_for('static', filename='cecil.jpg') }}" alt="Foto Peneliti" class="profile-photo">
+                <p class="mentor-name">Ceciliana Takeshi</p>
+                <p class="mentor-role">Mahasiswa</p>
+            </div>
+
+            <!-- Pak Nova's Section -->
+            <div class="mentor">
+                <img src="{{ url_for('static', filename='panova.jpg') }}" alt="Foto Pak Nova" class="profile-photo">
+                <p class="mentor-name">NOVARIO JAYA PERDANA, S.Kom., M.T.</p>
+                <p class="mentor-role">Dosen Pembimbing</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

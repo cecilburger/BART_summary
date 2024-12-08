@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Radar - Pencarian</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header with Logo and Navbar Links -->
+    <header class="header">
+        <div class="navbar-links">
+            <a href="{{ url_for('about') }}" class="navbar-link">About</a>
+            <a href="{{ url_for('help') }}" class="navbar-link">Help</a>
+        </div>
+    </header>
+
+    <!-- Centered Logo and Search Bar Container -->
+    <div class="main-container">
+        <div class="logo-text">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="RideRadar Logo" class="logo-image">
+        </div>
+        <!-- Search Form -->
+        <div class="result-header">
+            <form id="searchForm" action="{{ url_for('search_route') }}" method="post" class="result-search">
+                <input type="text" id="query" name="query" class="search-input" placeholder="Search..." required>
+                <button type="submit" id="searchButton" class="search-button" aria-label="Search">
+                    <img src="{{ url_for('static', filename='search_icon.png') }}" alt="Search Icon" class="search-icon">
+                </button>                
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
