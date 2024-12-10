@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading - Ride Radar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Loading Screen with Car Icon and Smoke Animation -->
+    <div id="loading-screen">
+        <div class="car-loading">
+            <div class="car-body"></div>
+            <div class="car-wheel wheel1"></div>
+            <div class="car-wheel wheel2"></div>
+            <div class="smoke smoke1"></div>
+            <div class="smoke smoke2"></div>
+            <div class="smoke smoke3"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Automatic Redirect -->
+    <script>
+        // Redirect to results page after 2 seconds, passing the query parameter
+        setTimeout(function() {
+            window.location.href = "{{ url_for('results', query=query) }}";
+        }, 2000); // 2000ms = 2 seconds, adjust if needed
+    </script>
+</body>
+</html>

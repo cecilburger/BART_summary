@@ -1,0 +1,387 @@
+/* General Styling */
+body {
+    background-color: #700000; /* Dark red background for main pages */
+    color: #ffffff;            /* Default text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Header and Navbar Links */
+.header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Container to Center Content */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* About Page Styling */
+.about-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for the about section */
+    border-radius: 5px; /* Rounded corners for the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* About Title Styling */
+.about-title {
+    text-align: center;
+    font-size: 24px;
+    color: #700000; /* Match the theme color */
+}
+
+/* Mentor Row Styling */
+.mentor-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Individual Mentor Section Styling */
+.mentor {
+    text-align: center;
+    width: 30%; /* Adjust width as necessary */
+}
+
+.profile-photo {
+    width: 120px; /* Adjust as necessary */
+    height: auto; /* Keep aspect ratio */
+    /* border-radius: 50%; */ /* Remove this line to make images portrait */
+}
+
+.mentor-name {
+    font-size: 18px;
+    color: #700000; /* Maroon color for names */
+    font-weight: bold;
+}
+
+.mentor-role {
+    font-size: 16px;
+    color: #000000; /* Black color for role descriptions */
+}
+
+
+
+/* Logo Text and Icon */
+.logo-text {
+    padding-top: 5cm;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.logo-image {
+    width: 280px;
+    height: 90px;
+}
+
+.site-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Search Container Styling */
+.search-container {
+    display: flex;            /* Aligns input and button horizontally */
+    align-items: center;       /* Vertically centers button with input */
+    justify-content: center;   /* Centers the search bar on the page */
+    margin-top: 100px;
+}
+
+.search-input {
+    width: 400px;
+    height: 40px;
+    border: none;
+    border-radius: 5px 0 0 5px; /* Rounded corners on the left side */
+    padding-left: 10px;
+    font-size: 16px;
+    color: #000;
+    background-color: #ddd;
+    outline: none;
+}
+
+.search-button {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border: none;
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    outline: none;
+}
+
+/* Search Button Logo */
+.search-button {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border: none;
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    outline: none;
+}
+
+/* New style for the search icon */
+.search-icon {
+    width: 20px; /* Adjust size as necessary */
+    height: auto;
+}
+
+
+/* Loading Screen Styling */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(112, 0, 0, 0.8); /* Dark red with transparency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* High z-index to cover content */
+}
+
+/* CSS-Based Car Icon for Loading Screen */
+.car-loading {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.car-body {
+    width: 60px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+}
+
+.car-wheel {
+    width: 15px;
+    height: 15px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -5px;
+}
+
+.wheel1 {
+    left: 5px;
+}
+
+.wheel2 {
+    right: 5px;
+}
+
+/* Smoke Animation */
+.smoke {
+    position: absolute;
+    bottom: 15px;
+    left: 70px;
+    width: 10px;
+    height: 10px;
+    background-color: #cccccc;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: smoke-animation 1.5s infinite ease-in-out;
+}
+
+.smoke1 {
+    animation-delay: 0s;
+}
+
+.smoke2 {
+    animation-delay: 0.5s;
+}
+
+.smoke3 {
+    animation-delay: 1s;
+}
+
+@keyframes smoke-animation {
+    0% {
+        opacity: 0.8;
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    50% {
+        opacity: 0.4;
+        transform: translateX(-20px) translateY(-20px) scale(1.3);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-40px) translateY(-40px) scale(1.5);
+    }
+}
+
+/* Result Page Styling */
+.result-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.back-button {
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+
+.result-search {
+    display: flex;
+    align-items: center;
+}
+
+.search-results-container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Style for each result item */
+.result-item {
+    background-color: #ffffff; /* White background for the container */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: #000000; /* Black color for default text */
+}
+
+/* Title Link Styling */
+.result-title a {
+    color: #700000; /* Red color for title link */
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.result-title a:hover {
+    text-decoration: underline;
+}
+
+/* Summary and Similarity Styling */
+.result-summary {
+    color: #000000; /* Black color for summary text */
+    margin-top: 10px;
+}
+
+.result-similarity {
+    color: #000000; /* Black color for similarity text */
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* About Page Styling */
+.about-container {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for the about section */
+    border-radius: 5px; /* Rounded corners for the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: #333333; /* Dark gray text for better contrast */
+}
+
+.about-title {
+    text-align: center;
+    font-size: 24px;
+    color: #700000; /* Match the theme color */
+}
+
+.about-section {
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    width: 100px; /* Adjust as necessary */
+    height: auto; /* Keep aspect ratio */
+    border-radius: 50%; /* Make images circular */
+    display: block; /* Center images */
+    margin: 10px auto; /* Center images */
+}
+
+.mentor {
+    text-align: center; /* Center-align text for mentors */
+}
+
+/* Help Page Styling */
+.help-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.help-title {
+    font-size: 26px;
+    color: #700000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.help-section {
+    margin-bottom: 20px;
+}
+
+.help-subtitle {
+    font-size: 20px;
+    color: #700000;
+    margin-bottom: 10px;
+}
+
+.help-section p, .help-section ul, .help-section ol {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+}
+
+.help-section ul, .help-section ol {
+    padding-left: 20px;
+}
+
+.help-section li {
+    margin-bottom: 8px;
+}
